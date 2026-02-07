@@ -3,42 +3,86 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Website</title>
+    <title>Our Love Story Quiz 💕</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <nav>
-            <h1>My Website</h1>
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+    <!-- Floating Hearts Background -->
+    <div class="hearts-background">
+        <div class="heart-float">💕</div>
+        <div class="heart-float">💖</div>
+        <div class="heart-float">💗</div>
+        <div class="heart-float">💝</div>
+        <div class="heart-float">❤️</div>
+        <div class="heart-float">💘</div>
+        <div class="heart-float">💕</div>
+        <div class="heart-float">💖</div>
+    </div>
 
-    <main>
-        <section id="home">
-            <h2>Welcome</h2>
-            <p>This is a simple website template.</p>
-            <button id="clickBtn">Click Me!</button>
-        </section>
+    <div class="container">
+        <div class="header-decoration">
+            <span class="sparkle">✨</span>
+            <h1>Our Love Story Quiz <span class="heart">💕</span></h1>
+            <span class="sparkle">✨</span>
+        </div>
+        <p class="subtitle">How well do you remember our special moments?</p>
 
-        <section id="about">
-            <h2>About</h2>
-            <p>This template includes HTML, CSS, and JavaScript files.</p>
-        </section>
+        <!-- Question 1 -->
+        <div class="quiz-section" id="q1">
+            <div class="question">1. When did our relationship officially begin?</div>
+            <div class="options">
+                <div class="option" onclick="checkAnswer(1, '2 July 2021', true)">2 July 2021</div>
+                <div class="option" onclick="checkAnswer(1, '5 July 2021', false)">5 July 2021</div>
+                <div class="option" onclick="checkAnswer(1, '12 July 2021', false)">12 July 2021</div>
+                <div class="option" onclick="checkAnswer(1, '18 July 2021', false)">18 July 2021</div>
+            </div>
+            <div class="result-message" id="result1"></div>
+        </div>
 
-        <section id="contact">
-            <h2>Contact</h2>
-            <p>Get in touch with us!</p>
-        </section>
-    </main>
+        <!-- Question 2 -->
+        <div class="quiz-section" id="q2">
+            <div class="question">2. When was our first date?</div>
+            <div class="options">
+                <div class="option" onclick="checkAnswer(2, '5 August 2021', false)">5 August 2021</div>
+                <div class="option" onclick="checkAnswer(2, '11 August 2021', true)">11 August 2021</div>
+                <div class="option" onclick="checkAnswer(2, '17 August 2021', false)">17 August 2021</div>
+                <div class="option" onclick="checkAnswer(2, '23 August 2021', false)">23 August 2021</div>
+            </div>
+            <div class="result-message" id="result2"></div>
+        </div>
 
-    <footer>
-        <p>&copy; 2026 My Website. All rights reserved.</p>
-    </footer>
+        <!-- Question 3 -->
+        <div class="quiz-section" id="q3">
+            <div class="question">3. When did we share our first hug?</div>
+            <div class="options">
+                <div class="option" onclick="checkAnswer(3, '10 December 2021', false)">10 December 2021</div>
+                <div class="option" onclick="checkAnswer(3, '15 December 2021', false)">15 December 2021</div>
+                <div class="option" onclick="checkAnswer(3, '23 December 2021', true)">23 December 2021</div>
+                <div class="option" onclick="checkAnswer(3, '28 December 2021', false)">28 December 2021</div>
+            </div>
+            <div class="result-message" id="result3"></div>
+        </div>
+
+        <!-- Question 4 -->
+        <div class="quiz-section" id="q4">
+            <div class="question">4. When was our first kiss?</div>
+            <div class="options">
+                <div class="option" onclick="checkAnswer(4, '8 February 2022', false)">8 February 2022</div>
+                <div class="option" onclick="checkAnswer(4, '14 February 2022', false)">14 February 2022</div>
+                <div class="option" onclick="checkAnswer(4, '16 February 2022', true)">16 February 2022</div>
+                <div class="option" onclick="checkAnswer(4, '22 February 2022', false)">22 February 2022</div>
+            </div>
+            <div class="result-message" id="result4"></div>
+        </div>
+
+        <div class="score-container" id="scoreContainer">
+            <div class="celebration">🎉 🎊 🎉</div>
+            <h2>Your Score</h2>
+            <div class="score" id="finalScore">0/4</div>
+            <p id="scoreMessage"></p>
+            <div class="love-message">I love you! 💖</div>
+        </div>
+    </div>
 
     <script src="script.js"></script>
 </body>

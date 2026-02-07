@@ -17,70 +17,177 @@
         <div class="heart-float">💘</div>
         <div class="heart-float">💕</div>
         <div class="heart-float">💖</div>
+        <div class="heart-float">🌹</div>
+        <div class="heart-float">💝</div>
+    </div>
+
+    <!-- Animated Background Circles -->
+    <div class="bg-circles">
+        <div class="circle circle-1"></div>
+        <div class="circle circle-2"></div>
+        <div class="circle circle-3"></div>
+        <div class="circle circle-4"></div>
+        <div class="circle circle-5"></div>
     </div>
 
     <div class="container">
-        <div class="header-decoration">
-            <span class="sparkle">✨</span>
-            <h1>Our Love Story Quiz <span class="heart">💕</span></h1>
-            <span class="sparkle">✨</span>
+        <!-- Welcome Slide -->
+        <div class="slide active" id="slide-0">
+            <div class="welcome-content">
+                <div class="sparkle-group">
+                    <span class="sparkle">✨</span>
+                    <span class="sparkle">💖</span>
+                    <span class="sparkle">✨</span>
+                </div>
+                <h1 class="welcome-title">Our Love Story Quiz</h1>
+                <div class="heart-pulse">💕</div>
+                <p class="welcome-subtitle">How well do you remember our special moments?</p>
+                <p class="welcome-description">Test your memory about the beautiful journey we've shared together! 🌹</p>
+                <button class="start-btn" onclick="nextSlide()">
+                    Start Quiz 💝
+                </button>
+            </div>
         </div>
-        <p class="subtitle">How well do you remember our special moments?</p>
 
         <!-- Question 1 -->
-        <div class="quiz-section" id="q1">
-            <div class="question">1. When did our relationship officially begin?</div>
-            <div class="options">
-                <div class="option" onclick="checkAnswer(1, '2 July 2021', true)">2 July 2021</div>
-                <div class="option" onclick="checkAnswer(1, '5 July 2021', false)">5 July 2021</div>
-                <div class="option" onclick="checkAnswer(1, '12 July 2021', false)">12 July 2021</div>
-                <div class="option" onclick="checkAnswer(1, '18 July 2021', false)">18 July 2021</div>
+        <div class="slide" id="slide-1">
+            <div class="progress-bar">
+                <div class="progress-fill" style="width: 25%"></div>
             </div>
-            <div class="result-message" id="result1"></div>
+            <div class="question-number">Question 1 of 4</div>
+            <div class="question-content">
+                <h2 class="question-title">When did our relationship officially begin?</h2>
+                <div class="question-icon">💑</div>
+                <div class="options">
+                    <div class="option" onclick="selectAnswer(1, '2 July 2021', true, this)">
+                        <span class="option-letter">A</span>
+                        <span class="option-text">2 July 2021</span>
+                    </div>
+                    <div class="option" onclick="selectAnswer(1, '5 July 2021', false, this)">
+                        <span class="option-letter">B</span>
+                        <span class="option-text">5 July 2021</span>
+                    </div>
+                    <div class="option" onclick="selectAnswer(1, '12 July 2021', false, this)">
+                        <span class="option-letter">C</span>
+                        <span class="option-text">12 July 2021</span>
+                    </div>
+                    <div class="option" onclick="selectAnswer(1, '18 July 2021', false, this)">
+                        <span class="option-letter">D</span>
+                        <span class="option-text">18 July 2021</span>
+                    </div>
+                </div>
+            </div>
         </div>
 
         <!-- Question 2 -->
-        <div class="quiz-section" id="q2">
-            <div class="question">2. When was our first date?</div>
-            <div class="options">
-                <div class="option" onclick="checkAnswer(2, '5 August 2021', false)">5 August 2021</div>
-                <div class="option" onclick="checkAnswer(2, '11 August 2021', true)">11 August 2021</div>
-                <div class="option" onclick="checkAnswer(2, '17 August 2021', false)">17 August 2021</div>
-                <div class="option" onclick="checkAnswer(2, '23 August 2021', false)">23 August 2021</div>
+        <div class="slide" id="slide-2">
+            <div class="progress-bar">
+                <div class="progress-fill" style="width: 50%"></div>
             </div>
-            <div class="result-message" id="result2"></div>
+            <div class="question-number">Question 2 of 4</div>
+            <div class="question-content">
+                <h2 class="question-title">When was our first date?</h2>
+                <div class="question-icon">🍽️</div>
+                <div class="options">
+                    <div class="option" onclick="selectAnswer(2, '5 August 2021', false, this)">
+                        <span class="option-letter">A</span>
+                        <span class="option-text">5 August 2021</span>
+                    </div>
+                    <div class="option" onclick="selectAnswer(2, '11 August 2021', true, this)">
+                        <span class="option-letter">B</span>
+                        <span class="option-text">11 August 2021</span>
+                    </div>
+                    <div class="option" onclick="selectAnswer(2, '17 August 2021', false, this)">
+                        <span class="option-letter">C</span>
+                        <span class="option-text">17 August 2021</span>
+                    </div>
+                    <div class="option" onclick="selectAnswer(2, '23 August 2021', false, this)">
+                        <span class="option-letter">D</span>
+                        <span class="option-text">23 August 2021</span>
+                    </div>
+                </div>
+            </div>
         </div>
 
         <!-- Question 3 -->
-        <div class="quiz-section" id="q3">
-            <div class="question">3. When did we share our first hug?</div>
-            <div class="options">
-                <div class="option" onclick="checkAnswer(3, '10 December 2021', false)">10 December 2021</div>
-                <div class="option" onclick="checkAnswer(3, '15 December 2021', false)">15 December 2021</div>
-                <div class="option" onclick="checkAnswer(3, '23 December 2021', true)">23 December 2021</div>
-                <div class="option" onclick="checkAnswer(3, '28 December 2021', false)">28 December 2021</div>
+        <div class="slide" id="slide-3">
+            <div class="progress-bar">
+                <div class="progress-fill" style="width: 75%"></div>
             </div>
-            <div class="result-message" id="result3"></div>
+            <div class="question-number">Question 3 of 4</div>
+            <div class="question-content">
+                <h2 class="question-title">When did we share our first hug?</h2>
+                <div class="question-icon">🤗</div>
+                <div class="options">
+                    <div class="option" onclick="selectAnswer(3, '10 December 2021', false, this)">
+                        <span class="option-letter">A</span>
+                        <span class="option-text">10 December 2021</span>
+                    </div>
+                    <div class="option" onclick="selectAnswer(3, '15 December 2021', false, this)">
+                        <span class="option-letter">B</span>
+                        <span class="option-text">15 December 2021</span>
+                    </div>
+                    <div class="option" onclick="selectAnswer(3, '23 December 2021', true, this)">
+                        <span class="option-letter">C</span>
+                        <span class="option-text">23 December 2021</span>
+                    </div>
+                    <div class="option" onclick="selectAnswer(3, '28 December 2021', false, this)">
+                        <span class="option-letter">D</span>
+                        <span class="option-text">28 December 2021</span>
+                    </div>
+                </div>
+            </div>
         </div>
 
         <!-- Question 4 -->
-        <div class="quiz-section" id="q4">
-            <div class="question">4. When was our first kiss?</div>
-            <div class="options">
-                <div class="option" onclick="checkAnswer(4, '8 February 2022', false)">8 February 2022</div>
-                <div class="option" onclick="checkAnswer(4, '14 February 2022', false)">14 February 2022</div>
-                <div class="option" onclick="checkAnswer(4, '16 February 2022', true)">16 February 2022</div>
-                <div class="option" onclick="checkAnswer(4, '22 February 2022', false)">22 February 2022</div>
+        <div class="slide" id="slide-4">
+            <div class="progress-bar">
+                <div class="progress-fill" style="width: 100%"></div>
             </div>
-            <div class="result-message" id="result4"></div>
+            <div class="question-number">Question 4 of 4</div>
+            <div class="question-content">
+                <h2 class="question-title">When was our first kiss?</h2>
+                <div class="question-icon">💋</div>
+                <div class="options">
+                    <div class="option" onclick="selectAnswer(4, '8 February 2022', false, this)">
+                        <span class="option-letter">A</span>
+                        <span class="option-text">8 February 2022</span>
+                    </div>
+                    <div class="option" onclick="selectAnswer(4, '14 February 2022', false, this)">
+                        <span class="option-letter">B</span>
+                        <span class="option-text">14 February 2022</span>
+                    </div>
+                    <div class="option" onclick="selectAnswer(4, '16 February 2022', true, this)">
+                        <span class="option-letter">C</span>
+                        <span class="option-text">16 February 2022</span>
+                    </div>
+                    <div class="option" onclick="selectAnswer(4, '22 February 2022', false, this)">
+                        <span class="option-letter">D</span>
+                        <span class="option-text">22 February 2022</span>
+                    </div>
+                </div>
+            </div>
         </div>
 
-        <div class="score-container" id="scoreContainer">
-            <div class="celebration">🎉 🎊 🎉</div>
-            <h2>Your Score</h2>
-            <div class="score" id="finalScore">0/4</div>
-            <p id="scoreMessage"></p>
-            <div class="love-message">I love you! 💖</div>
+        <!-- Results Slide -->
+        <div class="slide" id="slide-5">
+            <div class="results-content">
+                <div class="fireworks">🎆 🎇 🎆</div>
+                <h2 class="results-title">Quiz Complete!</h2>
+                <div class="score-display">
+                    <div class="score-label">Your Score</div>
+                    <div class="score-value" id="finalScore">0/4</div>
+                </div>
+                <div class="score-message" id="scoreMessage"></div>
+                <div class="love-declaration">
+                    <div class="love-hearts">💖 💝 💖</div>
+                    <p class="love-text">I Love You Forever!</p>
+                    <div class="love-hearts">❤️ 💕 ❤️</div>
+                </div>
+                <button class="restart-btn" onclick="restartQuiz()">
+                    Take Quiz Again 🔄
+                </button>
+            </div>
         </div>
     </div>
 
